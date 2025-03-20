@@ -73,24 +73,121 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_hrd',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
+if($_SERVER['SERVER_ADDR'] == '103.163.138.117'){  
+	// server production 
+	$db['default'] = array(
+		'dsn' => '',
+		'hostname' => '127.0.0.1',
+		'port'=>'33061',
+		'username' => 'shica',
+		'password' => 'shica12345',
+		'database' => 'db_hrd',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => TRUE,
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'latin1',
+		'dbcollat' => 'latin1_swedish_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	   );
+   
+	$db['db_fina'] = array(
+		'dsn' => '',
+		'hostname' => '127.0.0.1',
+		'port'=>'33061',
+		'username' => 'shica',
+		'password' => 'shica12345',
+		'database' => 'db_fina',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => TRUE,
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'latin1',
+		'dbcollat' => 'latin1_swedish_ci',	 
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	   );
+	   
+	$db['hrdonline'] = array(
+		'dsn' => '',
+		'hostname' => '127.0.0.1',
+		'port'=>'33061',
+		'username' => 'shica',
+		'password' => 'shica12345',
+		'database' => 'db_hrd',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => TRUE,
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'latin1',
+		'dbcollat' => 'latin1_swedish_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	   );
+	   
+	$db['db_cuti'] = array(
+		'dsn' => '',
+		'hostname' => '127.0.0.1',
+		'port'=>'33061',
+		'username' => 'shica',
+		'password' => 'shica12345',
+		'database' => 'db_cuti',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => TRUE,
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'latin1',
+		'dbcollat' => 'latin1_swedish_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	   );
+   
+}
+else{
+	$db['default'] = array(
+		'dsn'	=> '',
+		'hostname' => 'localhost',
+		'username' => 'root',
+		'password' => '',
+		'database' => 'db_hrd',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => (ENVIRONMENT !== 'production'),
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'utf8',
+		'dbcollat' => 'utf8_general_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	);
+}
